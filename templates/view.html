@@ -1,0 +1,22 @@
+{%  extends 'master/master-login.html' %}
+{% block title %}View Notes{% endblock%}
+{% block main %}
+<a href="/list" class="btn btn-primary">Go Back</a> 
+  <h3>View Notes</h3>
+  <div class="container">
+    <form method='GET' class="rounded border px-2 bg-dark">
+    <div class="mb-3 form-group">
+      <label for="title" class="form-label text-light">title</label>
+      <input type="text" class="form-control" 
+          id="title" placeholder="type here notes title...."
+          readonly value="{{ note.title }}">
+    </div>
+    <div class="mb-3 form-group">
+        <label for="notes" class="form-label text-light">notes</label>
+        <textarea class="form-control" 
+            id="title" placeholder="type here notes...." 
+            readonly >{{ note.notes }}</textarea>
+      </div>
+    </form>
+</div>
+{% endblock %}
